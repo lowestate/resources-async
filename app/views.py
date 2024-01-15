@@ -32,6 +32,7 @@ def status_callback(task):
     answer = {"report_ref": result["report_ref"], 
               "resource_ref": result["resource_ref"], 
               "fact": result["fact"]}
+    
     requests.post(nurl, json=answer, timeout=3)
 
 @api_view(['POST'])
